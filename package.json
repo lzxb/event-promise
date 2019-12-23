@@ -19,6 +19,14 @@
       "pre-commit": "tsdx lint --fix"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzxb/event-promise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lzxb/event-promise/issues"
+  },
+  "homepage": "https://github.com/lzxb/event-promise#readme",
   "name": "e-promise",
   "author": "lzxb",
   "module": "dist/e-promise.esm.js",
