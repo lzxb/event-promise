@@ -26,8 +26,10 @@ class IoEventPromise extends EventPromise {
 		const io = require('socket.io')(server);
 		io.on('connection', client => {
 			client.on('disconnect', () => {
+				// 连接失败
 				this.emitError('disconnect');
 			});
+			// 连接成功
 			this.emitSuccess(client);
 		});
 		server.listen(3000);
