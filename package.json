@@ -1,0 +1,19 @@
+{
+  "name": "event-promise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzxb/event-promise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lzxb/event-promise/issues"
+  },
+  "homepage": "https://github.com/lzxb/event-promise#readme"
+}
