@@ -8,52 +8,52 @@ export default class EventPromise {
 	private _value?: any;
 	private _promise?: any;
 	private _timeout?: any;
-	private _emit?: any;
+	private __emit?: any;
 	private _curCallCount?: any;
 	public constructor(options: Partial<EventPromiseOptions> = {}) {
 		this.options = {
 			timeout: options.timeout || 1000,
 			maxCall: options.maxCall || 100
 		};
-		this.emit(false);
+		this._emit(false);
 	}
-	public emit(status: boolean, value: any = null) {
+	private _emit(status: boolean, value: any = null) {
 		this._value = value;
-		if (this._emit) {
+		if (this.__emit) {
 			// 如果已经存在等待的 Promise，直接直接结束
 			if (status === true) {
-				return this._emit();
+				return this.__emit();
 			}
 			return;
 		}
 		this._promise = new Promise((resolve) => {
-			this._emit = () => {
+			this.__emit = () => {
 				clearTimeout(this._timeout);
-				this._emit = null;
+				this.__emit = null;
 				this._curCallCount = 0;
 				resolve();
 			};
 			this._curCallCount = 0;
 		});
 		if (status === true) {
-			return this._emit();
+			return this.__emit();
 		}
 		if (this.options.timeout < 1) return;
 		this._timeout = setTimeout(() => {
-			this._emit();
+			this.__emit();
 		}, this.options.timeout);
 	}
 	public emitSuccess(value?: any) {
-		this.emit(true, value);
+		this._emit(true, value);
 	}
 	public emitError(value: any) {
-		this.emit(false, value);
+		this._emit(false, value);
 	}
 	awaitPromise() {
-		if (this._emit) {
+		if (this.__emit) {
 			this._curCallCount++;
 			if (this._curCallCount >= this.options.maxCall) {
-				this._emit();
+				this.__emit();
 			}
 		}
 		return this._promise.then(() => this._value);
