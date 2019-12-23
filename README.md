@@ -55,7 +55,7 @@ io.emit('事件名称', '发送的参数');
 ## options
 - options.timeout
     - 在异常的状态下，Promise超时时间，将会直接结束Promise，返回响应结果
-    - default: 100ms
+    - default: 1000ms
 - options.maxCall
     - eventPromise.awaitPromise();  在异常的状态下，超过最大的调用次数，将会直接结束Promise，返回响应结果
     - defalut: 100
