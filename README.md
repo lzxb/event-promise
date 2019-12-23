@@ -1,3 +1,5 @@
+  [![npm](https://img.shields.io/npm/v/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise) [![npm](https://img.shields.io/npm/dt/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise) [![npm](https://img.shields.io/npm/l/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise)
+
 ## EventPromise
 
 ## 安装
@@ -37,7 +39,7 @@ class IoEventPromise extends EventPromise {
 	async emit (eventName, ...args) {
 		const client = await this.awaitPromise();
 		// 连接失败，则直接输出错误
-		if (typeof client === 'string') {
+		if (!client || typeof client === 'string') {
 			console.log(client);
 			return;
 		}
