@@ -8,7 +8,7 @@ yarn add e-promise
 ```
 
 ## 它可以做什么？
-在 Node 中，我们经常需要连接数据库、Redis、Mq、Socket、Rpc等等，它们都是基于回调通知是否连接成功，在连接成功的时候才能进行对应的操作，EventPromise 就是专门为了解决它而存在的。
+在 Node 中，我们经常需要连接数据库、Redis、Mq、Socket、Rpc等等，它们都是基于回调通知是否连接成功，在连接成功的时候才能进行对应的操作，EventPromise 就是专门为了解决它而存在，让你使用同步的形式调用异步的回调。
 
 ## 例子
 ```javascript
