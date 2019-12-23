@@ -36,11 +36,12 @@ class IoEventPromise extends EventPromise {
 	}
 	async emit (eventName, ...args) {
 		const client = await this.awaitPromise();
-		// 如果连接错误，则直接输出错误
+		// 连接失败，则直接输出错误
 		if (typeof client === 'string') {
 			console.log(client);
 			return;
 		}
+		// 连接成功，直接发送事件
 		client.emit(eventName, ...args);
 	}
 }
