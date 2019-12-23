@@ -1,19 +1,32 @@
 {
-  "name": "event-promise",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint --fix",
+    "prepare": "tsdx build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lzxb/event-promise.git"
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint --fix"
+    }
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lzxb/event-promise/issues"
-  },
-  "homepage": "https://github.com/lzxb/event-promise#readme"
+  "name": "e-promise",
+  "author": "lzxb",
+  "module": "dist/e-promise.esm.js",
+  "devDependencies": {
+    "@types/jest": "^24.0.24",
+    "husky": "^3.1.0",
+    "tsdx": "^0.12.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.4"
+  }
 }

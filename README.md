@@ -21,7 +21,7 @@ yarn add e-promise
 
 ## API
 - eventPromise.emit(status: boolean, value: any = null);
-    - status = true 的情况下，任何时候都会直接响应 Promise
+    - `status = true 的情况下，任何时候都会直接响应 Promise`
     - status = false 的情况下，将会等待 options.timeout 或 options.maxCall 触发的时候结束 Promise
     - value Promise 的返回值
 
@@ -30,4 +30,7 @@ yarn add e-promise
 
 - eventPromise.emitError(value?: any);
     - 等同于 eventPromise.emit(false, false);
+
+- eventPromise.awaitPromise();
+    - 等待 Promise 响应，并且可以拿到返回值
 

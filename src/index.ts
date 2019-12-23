@@ -11,7 +11,10 @@ export default class EventPromise {
 	private _emit?: any;
 	private _curCallCount?: any;
 	public constructor(options: Partial<EventPromiseOptions> = {}) {
-		this.options = { timeout: 1000, maxCall: 100, ...options };
+		this.options = {
+			timeout: options.timeout || 1000,
+			maxCall: options.maxCall || 100
+		};
 		this.emit(false);
 	}
 	public emit(status: boolean, value: any = null) {
