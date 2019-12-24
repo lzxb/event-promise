@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lzxb/event-promise.svg?branch=master)](https://travis-ci.org/lzxb/event-promise.js)
+[![Build Status](https://travis-ci.org/lzxb/event-promise.svg?branch=master)](https://travis-ci.org/lzxb/event-promise)
 [![npm](https://img.shields.io/npm/v/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise) 
 [![npm](https://img.shields.io/npm/dt/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise) 
 [![npm](https://img.shields.io/npm/l/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise)
