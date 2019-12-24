@@ -1,4 +1,8 @@
-  [![npm](https://img.shields.io/npm/v/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise) [![npm](https://img.shields.io/npm/dt/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise) [![npm](https://img.shields.io/npm/l/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise)
+[![Build Status](https://travis-ci.org/lzxb/event-promise.js.svg?branch=master)](https://travis-ci.org/lzxb/event-promise.js)
+[![Coverage Status](https://coveralls.io/repos/github/lzxb/event-promise/badge.svg?branch=master)](https://coveralls.io/github/lzxb/event-promise?branch=master)
+[![npm](https://img.shields.io/npm/v/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise) 
+[![npm](https://img.shields.io/npm/dt/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise) 
+[![npm](https://img.shields.io/npm/l/e-promise.svg?style=flat-square)](https://www.npmjs.com/package/e-promise)
 
 ## EventPromise
 
