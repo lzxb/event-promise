@@ -18,6 +18,7 @@
     "dev": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
+    "test:ci": "CI=true tsdx test --color --coverage",
     "lint": "tsdx lint --fix",
     "prepare": "tsdx build"
   },

@@ -1,0 +1,12 @@
+language: node_js
+node_js: stable
+
+env:
+  global:
+  service_name: travis-pro
+  repo_token: BgfeXYh8Rnn8MVH06KokB35ysbg0psniE
+
+install: 
+  - npm install
+script:
+ - npm run test:ci
