@@ -26,7 +26,7 @@ export default class EventPromise {
 			}
 			return;
 		}
-		this._promise = new Promise((resolve) => {
+		this._promise = new Promise<void>((resolve) => {
 			this.__emit = () => {
 				clearTimeout(this._timeout);
 				this.__emit = null;
